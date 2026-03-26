@@ -14,11 +14,13 @@ fun AppNavigator() {
     ) {
 
         composable("login") {
-            LoginScreen()
-        }
+            LoginScreen(navController)
+        }}
 
         composable("home") {
-            // TODO: create HomeScreen later
+            composable("home") {
+                HomeScreen()
+            }
         }
     }
 }
