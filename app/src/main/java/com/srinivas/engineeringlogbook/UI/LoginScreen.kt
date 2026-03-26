@@ -7,7 +7,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun LoginScreen() {
+fun LoginScreen(navController: NavController){
 
     var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
@@ -33,7 +33,9 @@ fun LoginScreen() {
 
         Spacer(modifier = Modifier.height(24.dp))
 
-        Button(onClick = { }) {
+        Button(onClick = {
+            navController.navigate("home")
+        }) {
             Text("Login")
         }
     }
